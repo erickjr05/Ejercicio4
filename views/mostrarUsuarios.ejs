@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="https://usuario-y-producto.onrender.com/css/estilosTabla.css">
+    
+</head>
+<body>
+    <h1>Tabla de Usuarios</h1>
+    <div class="contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Celular</th>
+                    <th>Correo</th>
+                    <th>Editar/borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                usuariosCorrectos.forEach((usuario) => {
+                %>
+                <tr>
+                    <td><%= usuario.idusuario %></td>
+                    <td><%= usuario.nombre %></td>
+                    <td><%= usuario.celular %></td>
+                    <td><%= usuario.correo %></td>
+                    <td>
+                        <a href="/editarUsuario/ <%= usuario.idusuario %>">Editar / </a>
+                        <a href="/borrarUsuario/ <%= usuario.idusuario %>">Borrar </a>
+                    </td>
+                </tr>
+                <%
+                }); 
+                %>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

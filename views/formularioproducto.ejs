@@ -1,0 +1,19 @@
+<%- include("templates/encabezado") %>
+<h1>Registro de Productos</h1>
+    <div class="contenedor">
+        <form action="/agregarProducto" method="post" id="formularioproducto" >
+            <label for="nombre">Nombre: </label><span class="ocultar errorNombre"></span>
+            <input type="text" placeholder="Nombre" name="nombre" id="nombre" autofocus>
+            
+            
+            <label for="descripcion">Descripcion: </label><span class="ocultar errorDescripcion"></span>
+            <input type="text" placeholder="Descripcion" name="descripcion" id="descripcion">
+            
+
+            <label for="cantidad">Cantidad: </label><span class="ocultar errorCantidad"></span>
+            <input type="text" placeholder="Cantidad" name="cantidad" id="cantidad">
+            
+            <button type="submit">Guardar datos</button>
+        </form>     
+    </div>
+<%- include("templates/pie") %>

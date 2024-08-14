@@ -1,0 +1,22 @@
+<%- include("templates/encabezado") %>
+<h1>Registro de Usuarios</h1>
+    <div class="contenedor">
+        <form action="/AgregarUsuario" method="post" id="formulario" >
+            <label for="nombre">Nombre: </label><span class="ocultar errorNombre">Nombre no válido</span>
+            <input type="text" placeholder="Nombre" name="nombre" id="nombre" autofocus>
+            <i class="ocultar xmarkErrorNombre fa-solid fa-circle-xmark"></i>
+            <i class="ocultar checkMarkNombre fa-solid fa-circle-check"></i>
+            
+            <label for="celular">Celular: </label><span class="ocultar errorCelular">Celular no válido</span>
+            <input type="text" placeholder="Celular" name="celular" id="celular">
+            <i class="ocultar xmarkErrorCelular fa-solid fa-circle-xmark"></i>
+            <i class="ocultar checkMarkCelular fa-solid fa-circle-check"></i>
+
+            <label for="correo">Correo: </label><span class="ocultar errorCorreo">Correo no válido</span>
+            <input type="text" placeholder="Correo" name="correo" id="correo">
+            <i class="ocultar xmarkErrorCorreo fa-solid fa-circle-xmark"></i>
+            <i class="ocultar checkMarkCorreo fa-solid fa-circle-check"></i>
+            <button type="submit">Guardar datos</button>
+        </form>     
+    </div>
+<%- include("templates/pie") %>
